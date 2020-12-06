@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet var blueNumbers: UILabel!
     @IBOutlet var sliderR: UISlider! {
         didSet {
-            sliderR.maximumValue = 255
+            sliderR.maximumValue = 255/255
             sliderR.minimumValue = 0
             sliderR.value = 0
             sliderR.thumbTintColor = .red
@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     }
     @IBOutlet var sliderG: UISlider! {
         didSet {
-            sliderG.maximumValue = 255
+            sliderG.maximumValue = 255/255
             sliderG.minimumValue = 0
             sliderG.value = 0
             sliderG.thumbTintColor = .green
@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     }
     @IBOutlet var sliderB: UISlider! {
         didSet {
-            sliderB.maximumValue = 255
+            sliderB.maximumValue = 255/255
             sliderB.minimumValue = 0
             sliderB.value = 0
             sliderB.thumbTintColor = .blue
@@ -44,23 +44,26 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func redSlider(_ sender: UISlider) {
+    @IBAction func redSliderAction(_ sender: UISlider) {
         let numberChange = Int(sender.value)
         redNumbers.text = "\(numberChange)"
    
     }
     
-    @IBAction func greenSlider(_ sender: UISlider) {
+    @IBAction func greenSliderAction(_ sender: UISlider) {
         let numberChange = Int(sender.value)
         greenNumbers.text = "\(numberChange)"
     }
     
-    @IBAction func blueSlider(_ sender: UISlider) {
+    @IBAction func blueSliderAction(_ sender: UISlider) {
         let numberChange = Int(sender.value)
         blueNumbers.text = "\(numberChange)"
     }
     
-   
+    @IBAction func colorChange(_ sender: UISlider) {
+        colorView.backgroundColor = UIColor(red: CGFloat(sliderR.value), green: CGFloat(sliderG.value), blue: CGFloat(sliderB.value), alpha: 1.0)
+    }
+    
     
     
     

@@ -15,24 +15,18 @@ class ViewController: UIViewController {
     @IBOutlet var blueNumbers: UILabel!
     @IBOutlet var sliderR: UISlider! {
         didSet {
-            sliderR.maximumValue = 255/255
-            sliderR.minimumValue = 0
             sliderR.value = 0
             sliderR.thumbTintColor = .red
         }
     }
     @IBOutlet var sliderG: UISlider! {
         didSet {
-            sliderG.maximumValue = 255/255
-            sliderG.minimumValue = 0
             sliderG.value = 0
             sliderG.thumbTintColor = .green
         }
     }
     @IBOutlet var sliderB: UISlider! {
         didSet {
-            sliderB.maximumValue = 255/255
-            sliderB.minimumValue = 0
             sliderB.value = 0
             sliderB.thumbTintColor = .blue
         }
@@ -41,13 +35,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        colorView.layer.cornerRadius = 15
+        colorView.backgroundColor = .black
         // Do any additional setup after loading the view.
     }
 
     @IBAction func redSliderAction(_ sender: UISlider) {
         let numberChange = Int(sender.value)
         redNumbers.text = "\(numberChange)"
-   
     }
     
     @IBAction func greenSliderAction(_ sender: UISlider) {
@@ -61,7 +56,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func colorChange(_ sender: UISlider) {
-        colorView.backgroundColor = UIColor(red: CGFloat(sliderR.value), green: CGFloat(sliderG.value), blue: CGFloat(sliderB.value), alpha: 1.0)
+        colorView.backgroundColor = UIColor(red: CGFloat(sliderR.value) / 255, green: CGFloat(sliderG.value) / 255, blue: CGFloat(sliderB.value) / 255, alpha: 1.0)
+        
     }
     
     

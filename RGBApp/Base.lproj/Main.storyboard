@@ -88,21 +88,21 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iYO-1t-hlu">
                                 <rect key="frame" x="129" y="265" width="269" height="106"/>
                                 <subviews>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="aN9-RF-Tql">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="aN9-RF-Tql">
                                         <rect key="frame" x="-2" y="0.0" width="273" height="31"/>
                                         <connections>
                                             <action selector="colorChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="PDv-Pe-jZU"/>
                                             <action selector="redSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="gDy-Wv-ejG"/>
                                         </connections>
                                     </slider>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="DM1-FI-wyP">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="DM1-FI-wyP">
                                         <rect key="frame" x="-2" y="38" width="273" height="31"/>
                                         <connections>
                                             <action selector="colorChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="HAx-Fn-RPg"/>
                                             <action selector="greenSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="mPr-JF-1vM"/>
                                         </connections>
                                     </slider>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="C3w-RM-s8U">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="C3w-RM-s8U">
                                         <rect key="frame" x="-2" y="76" width="273" height="31"/>
                                         <connections>
                                             <action selector="blueSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="XVB-Cr-GR4"/>
@@ -113,7 +113,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="CMm-lo-MGv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="1xI-rm-1tU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iYO-1t-hlu" secondAttribute="trailing" constant="16" id="2Kw-kP-k8l"/>
@@ -138,15 +138,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="252" y="-1288"/>
+            <point key="canvasLocation" x="980" y="-1358"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
